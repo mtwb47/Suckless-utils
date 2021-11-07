@@ -61,4 +61,4 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
-#include "/home/drmdub/.config/suckless/slstatus/themes/monokai.h"
+#include "/home/drmdub/.config/suckless/slstatus/themes/gruv.h"

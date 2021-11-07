@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/drmdub/.config/suckless/dwm/themes/monokai.h"
+#include "/home/drmdub/.config/suckless/dwm/themes/gruv.h"
 
 /* appearance */
 static const unsigned int borderpx  = 5;        /* border pixel of windows */
