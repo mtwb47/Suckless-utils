@@ -24,13 +24,13 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
-const char *spcmd3[] = {"st", "-n", "sp2", "-g", "120x34", NULL };
+const char *spcmd1[] = {"alacritty", "-t", "spterm", "--class", "spterm", NULL };
+const char *spcmd2[] = {"alacritty", "-t", "spfm", "--class", "spfm", "-e", "ranger", NULL };
+const char *spcmd3[] = {"alacritty", "-t", "sp2", "--class", "sp2", NULL };
 const char *spcmd4[] = {"bitwarden", NULL };
-const char *spcmd5[] = {"st", "-n", "vol", "-g", "144x41", "-e", "pulsemixer", NULL };
-const char *spcmd6[] = {"st", "-n", "mus", "-g", "144x41", "-e", "ncmpcpp", NULL };
-const char *spcmd7[] = {"st", "-n", "mail", "-g", "144x41", "-e", "neomutt", NULL };
+const char *spcmd5[] = {"alacritty", "-t", "vol", "--class", "vol", "-e", "pulsemixer", NULL };
+const char *spcmd6[] = {"alacritty", "-t", "mus", "--class", "mus", "-e", "ncmpcpp", NULL };
+const char *spcmd7[] = {"alacritty", "-t", "mail", "--class", "mail", "-e", "neomutt", NULL };
 const char *spcmd8[] = {"gitkraken", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -56,7 +56,13 @@ static const Rule rules[] = {
 	{ "Audacity", NULL,			NULL,		0,			    1,			 -1 },
 	{ "cs",	      NULL,			NULL,		0,			    1,			 -1 },
 	{ "Emacs",	  NULL,			NULL,		0,			    0,			 -1 },
-	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
+	{ "spterm",	  NULL,			NULL,		0,			    1,			 -1 },
+	{ "spfm",	  NULL,			NULL,		0,			    1,			 -1 },
+	{ "sp2",	  NULL,			NULL,		0,			    1,			 -1 },
+	{ "vol",	  NULL,			NULL,		0,			    1,			 -1 },
+	{ "mus",	  NULL,			NULL,		0,			    1,			 -1 },
+	{ "mail",	  NULL,			NULL,		0,			    1,			 -1 },
+	{ NULL,       "spterm",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spfm",		NULL,		SPTAG(1),		1,			 -1 },
 	{ NULL,		  "sp2",       	NULL,		SPTAG(2),		1,			 -1 },
 	{ NULL,		  "bitwarden", 	NULL,		SPTAG(3),		1,			 -1 },
