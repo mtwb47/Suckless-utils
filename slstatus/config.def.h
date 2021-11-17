@@ -1,3 +1,4 @@
+ *                                                     NULL on OpenBSD
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
